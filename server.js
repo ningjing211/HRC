@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3001;
+const port = 3002;
 
 // 设置MIME类型
 app.use((req, res, next) => {
@@ -11,12 +11,17 @@ app.use((req, res, next) => {
         res.type('application/javascript');
     } else if (req.url.endsWith('.svg')) {
         res.type('image/svg+xml');
+    } else if (req.url.endsWith('.woff')) {
+        res.type('font/woff');
+    } else if (req.url.endsWith('.woff2')) {
+        res.type('font/woff2');
     }
     next();
 });
 
 // 设置静态文件目录
 app.use(express.static(__dirname));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/build', express.static(path.join(__dirname, 'build')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/cdn-cgi', express.static(path.join(__dirname, 'cdn-cgi')));

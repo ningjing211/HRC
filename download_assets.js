@@ -27,12 +27,31 @@ const downloadFile = (url, destination) => {
 
 // 需要下载的资源列表
 const resources = [
-    // SVG文件（已下载）
-    // {
-    //     url: 'https://big.dk/assets/svg/cursor/arrow_left_small.svg',
-    //     dest: 'public/images/arrow_left_small.svg'
-    // },
-    // ... 其他SVG文件 ...
+    // SVG文件
+    {
+        url: 'https://big.dk/assets/svg/cursor/arrow_left_small.svg',
+        dest: 'assets/svg/cursor/arrow_left_small.svg'
+    },
+    {
+        url: 'https://big.dk/assets/svg/cursor/arrow_right_small.svg',
+        dest: 'assets/svg/cursor/arrow_right_small.svg'
+    },
+    {
+        url: 'https://big.dk/assets/svg/cursor/arrow_left_white.svg',
+        dest: 'assets/svg/cursor/arrow_left_white.svg'
+    },
+    {
+        url: 'https://big.dk/assets/svg/cursor/arrow_right_white.svg',
+        dest: 'assets/svg/cursor/arrow_right_white.svg'
+    },
+    {
+        url: 'https://big.dk/assets/svg/cursor/pause.svg',
+        dest: 'assets/svg/cursor/pause.svg'
+    },
+    {
+        url: 'https://big.dk/assets/svg/cursor/play.svg',
+        dest: 'assets/svg/cursor/play.svg'
+    },
 
     // CSS文件
     {
@@ -42,20 +61,18 @@ const resources = [
 
     // JavaScript文件
     {
-        url: 'https://big.dk/js/main.js',
-        dest: 'public/js/main.js'
+        url: 'https://big.dk/build/js/main.js',
+        dest: 'build/js/main.js'
+    },
+
+    // 字体文件
+    {
+        url: 'https://big.dk/assets/fonts/everett-regular-webfont.woff2',
+        dest: 'assets/fonts/everett-regular-webfont.woff2'
     },
     {
-        url: 'https://big.dk/js/script.js',
-        dest: 'public/js/script.js'
-    },
-    {
-        url: 'https://big.dk/js/content.js',
-        dest: 'public/js/content.js'
-    },
-    {
-        url: 'https://big.dk/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js',
-        dest: 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js'
+        url: 'https://big.dk/assets/fonts/everett-regular-webfont.woff',
+        dest: 'assets/fonts/everett-regular-webfont.woff'
     },
 
     // Favicon
