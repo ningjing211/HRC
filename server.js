@@ -15,6 +15,8 @@ app.use((req, res, next) => {
         res.type('font/woff');
     } else if (req.url.endsWith('.woff2')) {
         res.type('font/woff2');
+    } else if (req.url.endsWith('.png')) {
+        res.type('image/png');
     }
     next();
 });
@@ -28,6 +30,16 @@ app.use('/cdn-cgi', express.static(path.join(__dirname, 'cdn-cgi')));
 
 // 路由处理
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// 处理带分号的路由
+app.get('/;', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// 处理项目路由
+app.get('/projects/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 

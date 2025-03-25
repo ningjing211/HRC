@@ -53,16 +53,34 @@ const resources = [
         dest: 'assets/svg/cursor/play.svg'
     },
 
+    // 声音控制图片
+    {
+        url: 'https://big.dk/assets/images/video/sound_off@2.png',
+        dest: 'assets/images/video/sound_off@2.png'
+    },
+    {
+        url: 'https://big.dk/assets/images/video/sound_on@2.png',
+        dest: 'assets/images/video/sound_on@2.png'
+    },
+
     // CSS文件
     {
         url: 'https://big.dk/build/css/bundle.css',
         dest: 'build/css/bundle.css'
+    },
+    {
+        url: 'https://big.dk/build/css/bundle.css.map',
+        dest: 'build/css/bundle.css.map'
     },
 
     // JavaScript文件
     {
         url: 'https://big.dk/build/js/main.js',
         dest: 'build/js/main.js'
+    },
+    {
+        url: 'https://big.dk/build/js/main.js.map',
+        dest: 'build/js/main.js.map'
     },
 
     // 字体文件
